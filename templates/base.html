@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome</title>
+</head>
+<body>
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="#"></a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+            <li class="nav-item active">
+                <a class="nav-link" href="/WelcomePage/{{ content }}">Welcome {{ content }}<span class="sr-only"></span></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/logout">Logout</a>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link" href="/about">About</a>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link" href="/contact">Contact</a>
+            </li>
+
+
+        </ul>
+    </div>
+</nav>
+<img src="{{ url_for('static', filename='images/weatherr.png.png') }}"
+     style="height: 408px; width: 845px; margin: auto; display: flex;"/>
+<h1 style="text-align: center;">Hi {{ content }} Today's weather in Tbilisi is {{ curweather }}</h1>
+<div class="card">
+    <div class="card-body">
+        <p class="card-text" style="text-align: center;">
+            Click here to visit our profiles
+        </p>
+        <div class="d-flex justify-content-center">
+            <a href="https://www.facebook.com/profile.php?id=100010848495691" class="btn btn-primary btn-lg active"
+               style="" role="button" aria-pressed="true">Nika dadvani</a>
+            <a href="https://www.facebook.com/profile.php?id=100008406180289" class="btn btn-secondary btn-lg active"
+               style="" role="button" aria-pressed="true">Gio kravchenko</a>
+        </div>
+
+    </div>
+</div>
+</body>
+</html>
